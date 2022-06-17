@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flask - Astronomy Picture</title>
+</head>
+
+<body>
+    {% if media_type == 'image' %}
+        <img scr={{media_url}} class="img-fluid" alt="Responsive image">
+    {% elif media_type == 'video' %}
+        <iframe scr={{media_url}} allowfullscreen></iframe>
+    {% else %}
+        <h4>Oops ! Something wrong. </h4>
+    {% endif %}
+    <h5>{{title_text}}</h5>
+    <h6>{{copyright_text}}</h6>
+    <p>{{description_text}}</p>
+</body>
+
+</html>
